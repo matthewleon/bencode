@@ -39,7 +39,7 @@ Library
                     , bytestring
                     , containers
                     , binary
-                    , mtl
+                    , mtl >= 2.2.1 && < 2.3
 
 test-suite doctests
   type:           exitcode-stdio-1.0
