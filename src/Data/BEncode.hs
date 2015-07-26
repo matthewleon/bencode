@@ -40,10 +40,10 @@ type BParser a = GenParser Token () a
 {- | The B-coding defines an abstract syntax tree given as a simple
      data type here
 -}
-data BEncode = BInt Integer
-             | BString L.ByteString
-             | BList [BEncode]
-             | BDict (Map String BEncode)
+data BEncode = BInt !Integer
+             | BString !L.ByteString
+             | BList ![BEncode]
+             | BDict !(Map String BEncode)
                deriving (Eq, Ord, Show)
 
 instance Binary BEncode where
